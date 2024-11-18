@@ -8,13 +8,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class AnimalsCage {
 
-    @Autowired
     @Qualifier("dog")
+    @Autowired
     private Animal animal;
 
     @Autowired
     private Timer timer;
-
+    
     public void whatAnimalSay() {
         System.out.println("Say:");
         System.out.println(animal.toString());
@@ -22,7 +22,9 @@ public class AnimalsCage {
         System.out.println(new Timer().getTime());
         System.out.println("________________________");
     }
+
     public Timer getTimer() {
         return timer;
     }
 }
+// У МЕНЯ ЗДЕСЬ РАЗНИЦА В ДЕСЯТИТЫСЯЧНЫХ ДОЛЯХ СЕКУНДЫ , ОДНОГО ВРЕМЕНИ ЖЕ НЕ МОЖЕТ БЫТЬ ПРИ ВЫПОЛНЕНИИ ЦИКЛА
