@@ -7,12 +7,9 @@ import java.time.LocalTime;
 @Component
 public class Timer {
 
-    private final LocalTime startTime;
-    public Timer() {
-        this.startTime = LocalTime.now();
-    }
+    private Long nanoTime = System.nanoTime();
 
-    public LocalTime getTime() {
-        return startTime;
+    public Long getTime() {
+        return nanoTime;
     }
 }
